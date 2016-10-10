@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script src="docs_by_topic.js"></script>
+  <script src="topic_names.js"></script>
+  <script src="doc_names.js"></script>
+  <script src="extracts.js"></script>
+  <script src="matches.js"></script>
+  <script src="index-data.js"></script>
+  <script src="jquery.js"></script>
+  <script src="protovis.min.js"></script>
+  <script src="protovis-msie.min.js"></script>
+  <script src="common.js"></script>
+  <script src="browser.js"></script>
+  <link rel="stylesheet" type="text/css" href="browser.css"></link>
+  <title></title>
+ </head>
+ <body>
+  <div id="header">
+    <div id="title-area">
+    </div>
+    <div style='clear:both'></div>
+    <div id="prev-next-area">
+    </div>
+  </div>
+  <div id="main-area">
+<script>
+density_fcns = {"35": [0.0040558722343908594, 0.0085862815875843348, 0.015386632280545525, 0.023339933213562977, 0.029969067470009259, 0.032573500793527992, 0.029969067470009259, 0.023339933213562977, 0.015386632280545525, 0.0085862815875843348, 0.0040558722343908594, 0.0016217391109880487, 0.00054890261761280019, 0.00015726323295518193, 3.8139648256967077e-05, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.5659350661781927e-05, 7.6279296513934153e-05, 0.00031452646591036387, 0.0010978052352256004, 0.0032434782219760974, 0.0081117444687817189, 0.01717256317516867, 0.03077326456109105, 0.046679866427125953, 0.059938134940018518, 0.065147001587055983, 0.059938134940018518, 0.046679866427125953, 0.030773264561091057, 0.017172563175168885, 0.008111744468787329, 0.0032434782220985428, 0.0010978052374883457, 0.00031452650130565462, 7.6279765190130083e-05, 1.5664603788706178e-05, 0.0, 0.0, 0.0, 1.5664603788706174e-05, 7.6279765190130096e-05, 0.00031452650130565468, 0.0010978052374883455, 0.0032434782220985433, 0.0081117444687873273, 0.017172563175168885, 0.030773264561091057, 0.046679866427125953, 0.059938134940018518, 0.065147001587055983, 0.059938134940018518, 0.046679866427125953, 0.03077326456109105, 0.01717256317516867, 0.0081117444687817189, 0.0032434782219760974, 0.0010978052352256004, 0.00031452646591036387, 7.6279296513934153e-05, 1.5659350661781927e-05, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "30": [0.0040543477774701219, 0.01013968058597715, 0.021465703968960834, 0.038466580701363814, 0.058349833033907443, 0.07492266867502316, 0.081433751983819982, 0.07492266867502316, 0.058349833033907443, 0.038466580701363814, 0.021465703968960834, 0.01013968058597715, 0.0040543477774701219, 0.0013722565440320005, 0.00039315808238795481, 9.5349120642417698e-05, 1.9574188327227412e-05, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.9574188327227412e-05, 9.5349120642417698e-05, 0.00039315808238795481, 0.0013722565440320005, 0.0040543477774701219, 0.01013968058597715, 0.021465703968960834, 0.038466580701363814, 0.058349833033907443, 0.07492266867502316, 0.081433751983819982, 0.07492266867502316, 0.058349833033907443, 0.038466580701363814, 0.021465703968960834, 0.01013968058597715, 0.0040543477774701219, 0.0013722565440320005, 0.00039315808238795481, 9.5349120642417698e-05, 1.9574188327227412e-05, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]};
+this_doc = "110";
+top_topics = [];
+index_headings = [];
+book = "Book I";
+chapter = "Chap. XI";
+</script>
+<table id="text-table"><tr class="first-row"><td class="text-line">&nbsp;</td><td rowspan="131" id="chart-cell" valign="top"><div id="chart-area"><div id="chart"></div></div></td><td class="marginal-link-cell"></td><td valign="top" rowspan="130" id="popup-cell"><div id="popup-area"></div></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic35">Wheat</span> per <span class="topic13">Quarter</span>.&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic30">Years</span>.L.s.d.&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17011178&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1702196&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17031160&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1704266&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17051100&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1706160&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1707186&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1708216&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17093186&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17103180&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17112140&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1712264&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17132110&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17142104&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1715230&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1716280&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1717258&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">171811810&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17191150&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17201170&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17211176&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17221160&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17231148&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17241170&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1725286&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1726260&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1727220&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17282146&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17292610&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17301166&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">173111210&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1732168&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1733184&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">173411810&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1735230&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1736204&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17371180&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17381156&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17391186&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17402108&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1741268&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17421140&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17431410&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17441410&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1745176&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17461190&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">174711410&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17481170&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17491170&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17501126&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17511186&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17522110&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1753248&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17541148&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">175511310&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1756253&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1757300&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17582100&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">175911910&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17601166&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17611103&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17621190&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1763209&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1764269&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">64)129136&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">20618&#8260;64&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic35">Wheat</span> per <span class="topic35">Quarter</span>.&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic26">Years</span>.L.s.d.&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">173111210&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1732168&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1733184&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">173411810&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1735230&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1736204&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17371180&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17381156&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17391186&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17402108&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">10)18128&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">11731&#8260;5&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic35">Wheat</span> per <span class="topic35">Quarter</span>.&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic30">Years</span>.L.s.d.&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1741268&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17421140&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17431410&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17441410&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1745176&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17461190&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">174711410&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17481170&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17491170&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">17501126&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">10)16182&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">11394&#8260;5&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr class="last-row"><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+</table>
+  </div>
+  <div id="footer">
+    <div id="top-topic-area">
+    </div>
+  </div>
+  <div id="bottom-spacer"></div>
+ </body>
+</html>

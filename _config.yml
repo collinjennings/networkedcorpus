@@ -1,0 +1,45 @@
+# Site settings
+title: Networked Corpus
+description: A site for mapping...
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+
+# User settings
+username: Networked Corpus
+user_description: 
+user_title: Modeling 18th-century knowledge systems
+email: collin.jennings@gmail.com
+twitter_username: collinj
+github_username:  https://github.com/jeffbinder/networkedcorpus
+gplus_username:  
+disqus_username: 
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+
+# html minify
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
+
+# Links to include in menu navigation
+# For external links add external: true
+links:
+  - title: Home
+    url: /
+  - title: The Wealth of Nations
+    url: /networkedsmith
+  - title: The Spectator 
+    url: /spectator
+  - title: Technical Details 
+    url: /details
+  - title: About Us
+    url: /about
+
+# exclude my node related stuff
+exclude: ['package.json', 'src', 'node_modules', 'gulpfile.js']

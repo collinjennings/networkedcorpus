@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script src="docs_by_topic.js"></script>
+  <script src="topic_names.js"></script>
+  <script src="doc_names.js"></script>
+  <script src="extracts.js"></script>
+  <script src="matches.js"></script>
+  <script src="index-data.js"></script>
+  <script src="jquery.js"></script>
+  <script src="protovis.min.js"></script>
+  <script src="protovis-msie.min.js"></script>
+  <script src="common.js"></script>
+  <script src="browser.js"></script>
+  <link rel="stylesheet" type="text/css" href="browser.css"></link>
+  <title></title>
+ </head>
+ <body>
+  <div id="header">
+    <div id="title-area">
+    </div>
+    <div style='clear:both'></div>
+    <div id="prev-next-area">
+    </div>
+  </div>
+  <div id="main-area">
+<script>
+density_fcns = {"26": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0074534592144195e-05, 9.8750604537881589e-05, 0.0004127322707151819, 0.0014676056646744174, 0.0044475058598580771, 0.011511937130009142, 0.025520051746430957, 0.048606261287340968, 0.079815537002868295, 0.11338924937638699, 0.13978358501772745, 0.14984533735004632, 0.13978358501772745, 0.11338924937638699, 0.079815537002868295, 0.048606261287340968, 0.025520051746430957, 0.011511937130009142, 0.0044475058598580771, 0.0014676056646744174, 0.0004127322707151819, 9.8750604537881589e-05, 2.0074534592144195e-05, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "35": [0.0, 0.0, 0.0, 0.0, 0.0, 1.2809285456845004e-05, 5.5605364159313354e-05, 0.000205578353219801, 0.00064751055862229741, 0.0017379405848492757, 0.0039757204896109658, 0.0077521893942176659, 0.012884094708250962, 0.018249746165984633, 0.022026579936560032, 0.022646683108854211, 0.019828111465677208, 0.014777737795968282, 0.0093713206231789501, 0.0050543906339729659, 0.0023175079571548466, 0.00090304312300030251, 0.00029947372745440246, 8.7696539304079715e-05, 3.8187684036639464e-05, 7.8939638627608123e-05, 0.00026207798078383196, 0.00077236052686028558, 0.0019314047489915863, 0.0040889052420210615, 0.0073283291239595654, 0.01112217766051846, 0.014310144046118996, 0.015675638864232917, 0.014858435255851284, 0.01290179063690994, 0.011967917364124997, 0.014390286735717435, 0.021527403144605495, 0.032801359062796791, 0.045370955748168351, 0.054988110205925707, 0.05802102877340181, 0.053537462594070433, 0.043935683217299772, 0.033566760466224588, 0.026268872227557218, 0.023420994619498686, 0.023634055930207034, 0.024085533803537673, 0.022492420336816837, 0.018378614748977083, 0.012914497325950994, 0.0077582965784021773, 0.0039767637276446974, 0.0017380919757807125, 0.00064752920727389552, 0.00020558030198624525, 5.5605536834891882e-05, 1.280929842570218e-05, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.8161737265222418e-05, 7.4887253788181879e-05, 0.00026138219886323821, 0.00077225671951811851, 0.0019313677306623145, 0.0040887055178973021, 0.0073269677526407269, 0.011114253911220466, 0.01427098450952822, 0.015511190854060952, 0.01427098450952822, 0.011114253911220466, 0.0073269677526407269, 0.0040887055178973021, 0.0019313677306623145, 0.00077225671951811851, 0.00026138219886323821, 7.48872537881836e-05, 1.8161737265275046e-05, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0025945677391097e-05, 8.3968122420794808e-05, 0.00029882582575732917, 0.00090294781894973753, 0.0023174960904213736, 0.0050543893832284597, 0.0093713205115893775, 0.01477773778754083, 0.019828111465138454, 0.022646683108825061, 0.022026579936558696, 0.018249746165984577, 0.012884094708250962, 0.0077521893942176659, 0.0039757204896109658, 0.0017379405848492757, 0.00064751055862229741, 0.000205578353219801, 5.5605364159313361e-05, 1.2809285456845003e-05, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "13": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.3383023061429462e-05, 6.5833736358587717e-05, 0.00027515484714345456, 0.00097840377644961151, 0.0029650039065720508, 0.0076746247533394278, 0.01701336783095397, 0.032404174191560643, 0.053210358001912185, 0.075592832917591321, 0.093189056678484955, 0.099896891566697538, 0.093189056678484955, 0.075592832917591321, 0.053210358001912185, 0.032404174191560643, 0.01701336783095397, 0.0076746247533394278, 0.0029650039065720508, 0.00097840377644961151, 0.00027515484714345456, 6.5833736358587717e-05, 1.3383023061429462e-05, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.3049458884818228e-05, 6.3566080428278411e-05, 0.00026210538825863634, 0.00091483769602133296, 0.0027028985183134148, 0.0067597870573180953, 0.014310469312640555, 0.025644387134242542, 0.038899888689271633, 0.049948445783348769, 0.054289167989213329, 0.049948445783348769, 0.038899888689271633, 0.025644387134242542, 0.014310469312640555, 0.0067597870573180953, 0.0027028985183134148, 0.00091483769602133296, 0.00026210538825863634, 6.3566080428278411e-05, 1.3049458884818228e-05, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "14": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0074534592144195e-05, 9.8750604537881589e-05, 0.0004127322707151819, 0.0014676056646744174, 0.0044475058598580771, 0.011511937130009142, 0.025520051746430957, 0.048606261287340968, 0.079815537002868295, 0.11338924937638699, 0.13978358501772745, 0.14984533735004632, 0.13978358501772745, 0.11338924937638699, 0.079815537002868295, 0.048606261287340968, 0.025520051746430957, 0.011511937130009142, 0.0044475058598580771, 0.0014676056646744174, 0.0004127322707151819, 9.8750604537881589e-05, 2.0074534592144195e-05, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]};
+this_doc = "109";
+top_topics = [];
+index_headings = ["Windsor"];
+book = "Book I";
+chapter = "Chap. XI";
+</script>
+<table id="text-table"><tr class="first-row"><td class="text-line">&nbsp;</td><td rowspan="193" id="chart-cell" valign="top"><div id="chart-area"><div id="chart"></div></div></td><td class="marginal-link-cell"></td><td valign="top" rowspan="192" id="popup-cell"><div id="popup-area"></div></td></tr>
+<tr><td class="text-line">1499 0   4 0 - - - 0   6 0&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1504 0   5 8 - - - 0   8 6&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1521 1   0 0 - - - 1 10 0&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1551 0   8 0 - - - 0   8 0&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1553 0   8 0 - - - 0   8 0&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1554 0   8 0 - - - 0   8 0&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1555 0   8 0 - - - 0   8 0&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1556 0   8 0 - - - 0   8 0&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1957 0   4 00   5 00   8 02 13 4 0 17 8½ 0 17 8½&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1558 0   8 0 - - - 0   8 0&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1559 0   8 0 - - - 0   8 0&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1560 0   8 0 - - - 0   8 0&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic35">Total</span>, 6   0  2½&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic35">Average</span> <span class="topic35">price</span>, 0 10 05&#8260;12&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1561 0   8 0 - - - 0   8 0&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1562 0   8 0 - - - 0   8 0&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1574 2 16 01 4 0 2   0 0 2   0 0&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1587 3   4 0 - - - 3   4 0&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1594 2 16 0 - - - 2 16 0&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1595 2 13 0 - - - 2 13 0&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1596 4   0 0 - - - 4   0 0&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1597 5   4 04   0 0 4 12 0 4 12 0&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1598 2 16 8 - - - 2 16 8&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1599 1 19 2 - - - 1 19 2&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1600 1 17 8 - - - 1 17 8&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1601 1 14 10 - - - 1 14 10&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">Total, 28   9  4&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic35">Average</span> <span class="topic35">price</span>, 2   7  5&#8531;&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic35">PRICES</span> OF THE <span class="topic35">QUARTER</span> OF NINE <span class="topic26">BUSHELS</span> OF THE BEST OR <span class="topic35">HIGHEST</span> <span class="topic7">PRICED</span> <span class="topic35">WHEAT</span> AT <span class="topic13">WINDSOR</span>&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic14">MARKET</span>, ON <span class="topic17">LADY</span>-<span class="topic9">DAY</span> AND <span class="topic36">MICHAELMAS</span>, FROM 1595 TO 1764, BOTH <span class="topic35">INCLUSIVE</span>; THE&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic35">PRICE</span> OF EACH <span class="topic13">YEAR</span> BEING THE <span class="topic26">MEDIUM</span> BETWEEN THE <span class="topic35">HIGHEST</span> <span class="topic35">PRICES</span> OF THOSE TWO&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic14">MARKET</span>-<span class="topic19">DAYS</span>.&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic35">Wheat</span> per <span class="topic35">Quarter</span>.&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic35">Years</span>.L.s.d.&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1595200&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1596280&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1597396&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">15982168&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">15991192&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16001178&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">160111410&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1602194&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16031154&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16041108&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">160511510&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16061130&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16071168&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16082168&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16092100&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">161011510&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16111188&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1612224&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1613288&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1614218½&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16151188&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1616204&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1617288&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1618268&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16191154&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16201104&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">26)5406½&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">2169&#8260;13&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic35">Wheat</span> per <span class="topic35">Quarter</span>.&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic13">Years</span>.L.s.d.&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16211104&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16222188&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16232120&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1624280&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16252120&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1626294&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16271160&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1628180&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1629220&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16302158&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1631380&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16322134&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16332180&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16342160&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16352160&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16362168&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16)4000&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">2100&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic35">Wheat</span> per <span class="topic35">Quarter</span>.&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic35">Years</span>.L.s.d.&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16372130&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16382174&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16392410&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1640248&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1641280&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1642[26]000&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1643[26]000&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1644[26]000&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1645[26]000&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1646280&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16473130&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1648450&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1649400&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16503168&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16513134&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1652296&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16531156&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1654160&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16551134&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1656230&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1657268&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1658350&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1659360&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16602166&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16613100&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16623140&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16632170&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1664206&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1665294&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16661160&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16671160&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1668200&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1669244&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1670218&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1671220&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1672210&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1673268&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1674388&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1675348&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16761180&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1677220&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16782190&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1679300&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1680250&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1681268&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1682240&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1683200&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1684240&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1685268&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16861140&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1687152&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1688260&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16891100&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16901148&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16911140&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1692268&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1693378&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1694340&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16952130&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">16963110&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1697300&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1698384&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1699340&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1700200&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">60)15318&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">2110½&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr class="last-row"><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+</table>
+  </div>
+  <div id="footer">
+    <div id="top-topic-area">
+    </div>
+  </div>
+  <div id="bottom-spacer"></div>
+ </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script src="docs_by_topic.js"></script>
+  <script src="topic_names.js"></script>
+  <script src="doc_names.js"></script>
+  <script src="extracts.js"></script>
+  <script src="matches.js"></script>
+  <script src="index-data.js"></script>
+  <script src="jquery.js"></script>
+  <script src="protovis.min.js"></script>
+  <script src="protovis-msie.min.js"></script>
+  <script src="common.js"></script>
+  <script src="browser.js"></script>
+  <link rel="stylesheet" type="text/css" href="browser.css"></link>
+  <title>INDEX.</title>
+ </head>
+ <body>
+  <div id="header">
+    <div id="title-area">
+    </div>
+    <div style='clear:both'></div>
+    <div id="prev-next-area">
+    </div>
+  </div>
+  <div id="main-area">
+<script>
+density_fcns = {"35": [0.038466580701363814, 0.058349833033907443, 0.07492266867502316, 0.081433751983819982, 0.07492266867502316, 0.058349833033907443, 0.038466580701363814, 0.021465703968960831, 0.010139680585977142, 0.0040543477774701219, 0.0013722565440319994, 0.00039315808238795448, 9.5349120642417603e-05, 1.9574188327227341e-05, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.9574188327227341e-05, 9.5349120642417603e-05, 0.00039315808238795448, 0.0013722565440319994, 0.0040543477774701219, 0.010139680585977142, 0.021465703968960831, 0.038466580701363814, 0.058349833033907443, 0.07492266867502316, 0.081433751983819982, 0.07492266867502316, 0.058349833033907443, 0.038466580701363814, 0.021465703968960831, 0.010139680585977142, 0.0040543477774701219, 0.0013722565440319994, 0.00039315808238795448, 9.5349120642417603e-05, 1.9574188327227341e-05, 0.0, 0.0, 0.0], "26": [0.0075148349154406787, 0.011403398065828655, 0.01596057572423679, 0.020575515538609909, 0.02477314673953776, 0.02863677026576365, 0.032605278829008356, 0.036657704324979876, 0.039795262030829469, 0.040626357218846963, 0.038615727418253802, 0.034650482692568971, 0.030243947944202661, 0.026228295844156008, 0.022328271578536004, 0.017926081160686821, 0.013006430378774744, 0.0082753440143584194, 0.0045376235061908056, 0.002124967548452838, 0.00084604856746032684, 0.00028577826901080326, 8.1972484587444885e-05, 2.0931900306408594e-05, 0.0, 2.3783996896117189e-05, 8.2618768797173073e-05, 0.00025122464351872613, 0.00065246955523666906, 0.0014497560875244766, 0.0027664310652426032, 0.0045570374302213498, 0.0065228386635220216, 0.0081751182044982277, 0.009041260743307869, 0.0088835074051018415, 0.0078044881002474554, 0.0062243979791040596, 0.0047885620411941086, 0.0042503937226611192, 0.0053253111997655445, 0.0084754047416884283, 0.013627971683141539, 0.019987007124070907, 0.026196166098786368, 0.03091576431357582, 0.033490112692468661, 0.034229375419694966, 0.034101045013454276, 0.034047493444050461, 0.034376041517855574, 0.034603652250919867, 0.033839711356510691, 0.031417969494578146, 0.027315485524654431, 0.022104601294121853, 0.016591266580246559, 0.011482525046695091, 0.0072505146415482377], "3": [0.0026381048557752467, 0.0057333429834964915, 0.010728646726871701, 0.017466292911953014, 0.025115573652445333, 0.032533840597950843, 0.038782840940069847, 0.0432778347385816, 0.045576128374140344, 0.045362680476246073, 0.042847242393166354, 0.038977544463805233, 0.034884406645201933, 0.030980522011188019, 0.026762288212723338, 0.021613544998339881, 0.015700185094415314, 0.0099836716780775398, 0.0054696246350449474, 0.0025596094399380296, 0.0010186057355379061, 0.00034393023959188447, 9.8417891074653466e-05, 2.3868576835537509e-05, 0.0, 0.0, 0.0, 2.3852855958896655e-05, 9.8291162275749111e-05, 0.00034306428317817657, 0.0010135869664897254, 0.0025349202936645297, 0.0053664276339206556, 0.0096166607511757578, 0.014587583356811294, 0.018731517697251995, 0.02036333333110028, 0.018754521665606236, 0.014685888440727759, 0.0099606847688890488, 0.0063857568546634132, 0.0050985711202309863, 0.0065021397373653325, 0.01040106296795394, 0.016042398859449383, 0.022303011539778209, 0.028264677681771298, 0.033714588707310818, 0.038791686778860905, 0.042934786177661277, 0.04445553279855316, 0.041624025457666386, 0.034331712382661209, 0.024547167570532925, 0.015081360688216415, 0.0079251834188968535, 0.0035534006379436926, 0.0013575014513493987, 0.00044147874317121812], "13": [0.048606261287340968, 0.079815537002868295, 0.11338924937638699, 0.13978358501772745, 0.14984533735004632, 0.13978358501772745, 0.11338924937638699, 0.079815537002868295, 0.048606261287340968, 0.025520051746430957, 0.011511937130009142, 0.0044475058598580771, 0.0014676056646744174, 0.0004127322707151819, 9.8750604537881589e-05, 2.0074534592144195e-05, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]};
+this_doc = "287";
+top_topics = [26];
+index_headings = ["Herring buss bounty"];
+book = "Book IV";
+chapter = "Appendix";
+</script>
+<table id="text-table"><tr class="first-row"><td class="text-line"><span class="topic26">INDEX</span>.&nbsp;</td><td rowspan="60" id="chart-cell" valign="top"><div id="chart-area"><div id="chart"></div></div></td><td class="marginal-link-cell"></td><td valign="top" rowspan="59" id="popup-cell"><div id="popup-area"></div></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">The two following <span class="topic13">accounts</span> are <span class="topic26">subjoined</span>, in order to <span class="topic26">illustrate</span> and <span class="topic35">confirm</span> what is said in&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">the fifth <span class="topic10">chapter</span> of the <span class="topic26">fourth</span> <span class="topic10">book</span>, concerning the <span class="topic26">Tonnage</span> <span class="topic26">Bounty</span> to the <span class="topic26">White</span>-<span class="topic26">herring</span>&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic26">Fishery</span>. The <span class="topic13">reader</span>, I believe, may <span class="topic31">depend</span> upon the <span class="topic26">accuracy</span> of both <span class="topic3">accounts</span>.&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">An Account of <span class="topic26">Busses</span> <span class="topic26">fitted</span> out in <span class="topic26">Scotland</span> for <span class="topic26">eleven</span> <span class="topic26">Years</span>, with the <span class="topic26">Number</span> of <span class="topic3">empty</span> <span class="topic26">Barrels</span>&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><a name="topic26"><span class="topic37">carried</span> out, and the <span class="topic26">Number</span> of <span class="topic26">Barrels</span> of <span class="topic26">Herrings</span> <span class="topic26">caught</span>; also the <span class="topic26">Bounty</span>, at a</a>&nbsp;</td><td class="marginal-link-cell"><span class="marginal-link" id="26"></span></td></tr>
+<tr><td class="text-line"><span class="topic26">Medium</span>, on each <span class="topic26">Barrel</span> of <span class="topic26">Sea</span>-<span class="topic26">sticks</span>, and on each <span class="topic26">Barrel</span> when <span class="topic3">fully</span> <span class="topic26">packed</span>.&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic26">Years</span>.Number <span class="topic26">ofBusses</span>.<span class="topic3">Empty</span> <span class="topic26">Barrelscarried</span> out.<span class="topic26">Barrels</span> <span class="topic32">ofHerrings</span> <span class="topic26">caught</span>.<span class="topic26">Bounty</span> <span class="topic26">paidon</span> the <span class="topic26">Busses</span>.&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">L. s. d.&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1771    29    5,948    2,832 2,885   0 0&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1772 168 41,316 22,237 11,055   7 6&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1773 190 42,333 42,055 12,510   8 6&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1774 240 59,303 56,365 26,952   2 6&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1775 275 69,144 52,879 19,315 15 0&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1776 294 76,329 51,863 21,290   7 6&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1777 240 62,679 45,313 17,592   2 6&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1778 220 56,390 40,958 16,316   2 6&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1779 206 55,194 29,367 15,287   0 0&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1780 181 48,315 19,885 13,445 12 6&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1781 135 33,992 16,593 9,613 15 6&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">Total, 2,186 550,943 378,347L.165,463 14 0&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic26">Sea</span>-<span class="topic26">sticks</span>,378,347&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">1-3d <span class="topic26">deducted</span>,126,1152&#8260;3&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic26">Barrels</span> <span class="topic3">fully</span> <span class="topic26">packed</span>,     252,2311&#8260;3&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic26">Bounty</span>, at a <span class="topic26">medium</span>, for each <span class="topic26">barrel</span> of <span class="topic26">sea</span>-<span class="topic26">sticks</span>,L.0   8 2¼&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">But a <span class="topic26">barrel</span> of <span class="topic26">sea</span>-<span class="topic26">sticks</span> being only <span class="topic35">reckoned</span>&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">two <span class="topic26">thirds</span> of a <span class="topic26">barrel</span> <span class="topic3">fully</span> <span class="topic26">packed</span>, one third&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">is to be <span class="topic26">deducted</span>, which brings the <span class="topic26">bounty</span> <span class="topic26">toL</span>.0 12 3¾&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">And if the <span class="topic26">herrings</span> are <span class="topic26">exported</span>, there is besides, a <span class="topic26">premium</span> <span class="topic39">ofL</span>.0   2  8&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">So that the <span class="topic26">bounty</span> <span class="topic26">paid</span> by government in <span class="topic3">money</span>, for each <span class="topic26">barrel</span>, <span class="topic26">isL</span>.0 14 11¾&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">But if to this, the <span class="topic26">duty</span> of the <span class="topic26">salt</span> usually taken <span class="topic3">credit</span> for&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">as <span class="topic26">expended</span> in <span class="topic26">curing</span> each <span class="topic26">barrel</span>, which, at a <span class="topic26">medium</span>, is, of&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line"><span class="topic26">foreign</span>, one <span class="topic26">bushel</span> and one-<span class="topic26">fourth</span> of a <span class="topic26">bushel</span>, at 10s.&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">a-<span class="topic26">bushel</span>, be <span class="topic26">added</span>. viz.   0 12 6&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">the <span class="topic26">bounty</span> on each <span class="topic26">barrel</span> would amount <span class="topic26">toL</span>.1   7  5¾&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+<tr class="last-row"><td class="text-line">&nbsp;</td><td class="marginal-link-cell"></td></tr>
+</table>
+  </div>
+  <div id="footer">
+    <div id="top-topic-area">
+    </div>
+  </div>
+  <div id="bottom-spacer"></div>
+ </body>
+</html>

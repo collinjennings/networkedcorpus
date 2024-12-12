@@ -1,0 +1,21 @@
+function popup_seealso(topic, exclude_doc)
+{
+    var html = ["<div>",
+		topic_names[topic], ":<br />"];
+    var ndocs = 3;
+    if (docs_by_topic[topic].length < 3)
+	ndocs = docs_by_topic[topic].length;
+    for (var i = 0; i < ndocs; i++) {
+	var doc = docs_by_topic[topic][i];
+	if (doc == exclude_doc) {
+	    ndocs++;
+	    continue;
+	}
+	html.push("<a href='" + doc + ".html#topic" + topic + "'>");
+	html.push(doc);
+	html.push("<br />");
+    }
+    html.push("</div>")
+    $(html.join(""))
+	.appendTo($("body"));
+}
